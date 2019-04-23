@@ -25,7 +25,7 @@ if (!require("shiny")){install.packages("shiny")}
 
 Start an R session using RStudio and run this line:  
 ```
-shiny::runGitHub("3DtSNE", "CPTPGenomicTranscriptomic")
+shiny::runGitHub("3DtSNE", "mlebeur")
 ```
 This command will download the code of 3DtSNE from GitHub to a temporary directory of your computer and then launch the 3DtSNE app in the web browser. Once the web browser was closed, the downloaded code of 3DtSNE would be deleted from your computer. Next time when you run this command in RStudio, it will download the source code of 3DtSNE from GitHub to a temporary directory again. 
 
