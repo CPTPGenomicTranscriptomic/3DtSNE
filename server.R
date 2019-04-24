@@ -56,10 +56,10 @@ server = shinyServer(function(input, output) {
       font = list(
         family = "sans-serif",
         size = 20,
-        color = "#FFFFFF"
+        color = "#060606"
       ),
-      bgcolor = "#060606",
-      bordercolor = "#060606"
+      bgcolor = "#FFFFFF",
+      bordercolor = "#FFFFFF"
     )
     
     plot_ly(type="scatter3d", x = Y[,1], y = Y[,2], z = Y[,3], color = as.factor(label),
@@ -67,8 +67,8 @@ server = shinyServer(function(input, output) {
             width=800,  height = 800, mode="markers") %>%
       config(displayModeBar = F)  %>%
       layout(scene = list(xaxis=ax,yaxis=ax,zaxis=ax),
-             paper_bgcolor="#060606",
-             plot_bgcolor= "#060606",
+             #paper_bgcolor="#060606",
+             #plot_bgcolor= "#060606",
              legend = l
       )
   })
