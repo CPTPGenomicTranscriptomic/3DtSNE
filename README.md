@@ -34,7 +34,9 @@ This command will download the code of 3DtSNE from GitHub to a temporary directo
 
 **1. Upload your txt file:**
 
-You can upload only one *.txt files using tabultations as separators.
+You can upload only one *.txt files using tabultations as separator.
+
+The file must contain a header aka column names. One of theses names should be "label" and refers to the clustering result.
 
 The files must have the .txt extension to appear in the selection browser.
 
