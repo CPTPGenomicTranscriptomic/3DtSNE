@@ -20,6 +20,18 @@ library(shinycssloaders)
 library(shinythemes)
 
 server = shinyServer(function(input, output) {
+  
+  # sample file download (small dataset)
+  output$downloadSmallData <- downloadHandler(
+    filename <- function() {
+      paste('small', 'Example', 'File', '.csv', sep='')
+    },
+    content <- function(file) {
+      file.copy("smallExampleFile.csv", file)
+    },
+    contentType = "text/csv"
+)
+  
   output$plot <- renderPlotly({
     req(input$File)
     Y = read.table(input$File$datapath, header = TRUE)
