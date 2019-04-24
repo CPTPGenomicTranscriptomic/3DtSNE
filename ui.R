@@ -41,7 +41,6 @@ ui = fluidPage(
     ),
     mainPanel(
       navbarPage("t-SNE Visualization of Data",
-      theme = shinythemes::shinytheme("cyborg"),
       tabPanel("3D Explorer", withSpinner(plotlyOutput("plot"), color = "#808080"))
       )
     )
