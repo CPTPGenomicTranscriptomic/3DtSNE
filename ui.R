@@ -37,7 +37,8 @@ ui = fluidPage(
       wellPanel(
         fileInput(inputId = "File", label = "Select input file", accept = ".txt"),
         print("The file should contain a header and clustering labels (having the name \"label\" (txt tabulation format)).")
-      )
+      ),
+       downloadButton("downloadSmallData", label = "Download Small Input Example File"),
     ),
     mainPanel(
       navbarPage("t-SNE Visualization of Data",
