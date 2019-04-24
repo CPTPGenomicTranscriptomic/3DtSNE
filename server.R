@@ -24,12 +24,12 @@ server = shinyServer(function(input, output) {
   # sample file download (small dataset)
   output$downloadSmallData <- downloadHandler(
     filename <- function() {
-      paste('small', 'Example', 'File', '.csv', sep='')
+      paste('small', 'Example', 'File', '.txt', sep='')
     },
     content <- function(file) {
-      file.copy("smallExampleFile.csv", file)
+      file.copy("smallExampleFile.txt", file)
     },
-    contentType = "text/csv"
+    contentType = "text/plain"
 )
   
   output$plot <- renderPlotly({
